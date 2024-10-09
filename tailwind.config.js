@@ -6,6 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(90deg, #F5F9FF 0.5%, #E4E4E4 8%, #E4E4E4 92%, #F5F9FF 100%)',
+      },
+      fontFamily: {
+        jeju: ['Jeju Gothic', 'sans-serif'], 
+        poppins: ['Poppins', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+      },
       colors:{
         primaryColor:'#06286E',
         darkBlue:'#0F2669',

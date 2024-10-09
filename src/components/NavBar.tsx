@@ -8,7 +8,7 @@ export const NavBar = () => {
         <img src="logo.svg" alt="logo" width={200}/>
       </div>
 
-      <div className="flex gap-[16px] text-primaryColor text-md font-medium">
+      <div className="flex font-roboto gap-[16px] text-primaryColor text-base font-medium">
         <span>Learn</span>
         <span>Practice</span>
         <span>Assessments</span>
