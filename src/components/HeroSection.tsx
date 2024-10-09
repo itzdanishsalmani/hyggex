@@ -1,6 +1,19 @@
 import { StartLearningButton, BookDemoButton } from "./buttons";
-
+import { useEffect,useState } from "react";
 export const HeroSection = () => {
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0); // Track which text to show
+  const texts = [<Text1 />, <Text2 />, <Text3 />, <Text4 />]; // All text components
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Change the text every 4 seconds and loop back to the first after the last
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 2000);
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
   return (
 
     <div className="max-w-[1440px] px-[100px]">
@@ -50,6 +63,13 @@ export const HeroSection = () => {
           <StartLearningButton />
           <BookDemoButton />
         </div>
+
+        {/* roboto */}
+        <div className="mt-4 overflow-hidden py-2 h-10 text-sm font-medium">
+          <div className="scrolling-text">
+{texts[currentTextIndex]}
+          </div>
+        </div>
       </div>
       {/* column1 ends here*/}
 
@@ -92,7 +112,38 @@ export const HeroSection = () => {
   </div>
 </div>
 
-
     </div>
   );
 };
+
+const Text1 = () => {
+  return (
+    <div className="text-textDemoButton">
+      <div>Akash <span className="text-darkBlue"> has scored </span> 9/10 <span> in self-awareness test </span> Just now</div>
+      </div>
+  )
+}
+const Text2 = () => {
+  return (
+    <div className="text-textDemoButton">
+            <div>250+ <span className="text-darkBlue">Students has taken our self-awareness test in last </span> 24 Hours</div>
+    </div>
+  )
+}
+
+const Text3 = () => {
+  return (
+    <div className="text-textDemoButton">
+<div>1250 <span className="text-darkBlue">Students Reported  Improvement in their Grades with </span> Hyggex learning</div>
+</div>
+  )
+}
+
+const Text4 = () => {
+  return (
+    <div className="text-textDemoButton">
+<div>4235+ <span className="text-darkBlue">Students take our Sectional Tests on a </span> weekly basis</div>
+</div>
+  )
+}
+

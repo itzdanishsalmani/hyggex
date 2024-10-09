@@ -2,15 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+/* Horizontal scrolling for images */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .animate-scroll {
-    animation: scroll 10s linear infinite;
+  animation: scroll-horizontal 10s linear infinite;
+}
+
+/* Vertical scrolling for texts */
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(100%); /* Start below the container */
+  }
+  10% {
+    transform: translateY(0); /* Wait at the starting position */
+  }
+  90% {
+    transform: translateY(0); /* Hold until nearly finished */
+  }
+  100% {
+    transform: translateY(-100%); /* End above the container */
+  }
+}
+
+.scrolling-text {
+  animation: scroll-vertical 2s linear infinite; /* Corrected animation name */
 }

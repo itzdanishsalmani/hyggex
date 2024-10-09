@@ -20,3 +20,6 @@ export default {
   },
   plugins: [],
 }
+
+// textDemoButton #5189FCCC
+// darkblue #0F2669
