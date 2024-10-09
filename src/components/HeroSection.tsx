@@ -1,13 +1,15 @@
-import { StartLearningButton,BookDemoButton } from "./buttons";
+import { StartLearningButton, BookDemoButton } from "./buttons";
 
 export const HeroSection = () => {
   return (
-    <div className="max-w-[1440px] mx-auto px-[100px] mt-[90px] grid grid-cols-2">
 
-{/* column1 */}
+    <div className="max-w-[1440px] px-[100px]">
+
+    <div className="mt-[90px] grid grid-cols-2">
+
+      {/* column1 */}
       <div className="mr-16">
-
-        <div className="flex gap-[25px] text-sm text-threeImageText font-medium">
+        <div className="flex gap-[25px] text-sm text-darkBlue font-medium">
           <div className="flex gap-2">
             <img src="student.svg" alt="" />
             Students
@@ -24,14 +26,16 @@ export const HeroSection = () => {
 
         {/* poppins */}
         <div className="mt-6 text-5xl text-darkBlue font-extrabold tracking-wide leading-snug">
-                <div className="flex gap-4">
-          <div>Beyond</div>
-          <div className="flex flex-col justify-center items-center">  
-                <div>Learning,</div>
-                <div><img src="line.svg" alt="" /></div>
-                </div>
+          <div className="flex gap-4">
+            <div>Beyond</div>
+            <div className="flex flex-col justify-center items-center">
+              <div>Learning,</div>
+              <div>
+                <img src="line.svg" alt="" />
+              </div>
+            </div>
           </div>
-           Becoming.
+          Becoming.
         </div>
 
         {/* roboto */}
@@ -41,37 +45,52 @@ export const HeroSection = () => {
           time, with less stress.
         </div>
 
-{/* poppoins */}
+        {/* poppoins */}
         <div className="mt-[60px] flex justify-start gap-4">
           <StartLearningButton />
           <BookDemoButton />
         </div>
+      </div>
+      {/* column1 ends here*/}
+
+      {/* column2 */}
+        <div>
+          <img src="child.svg" alt="" />
+        </div>
 
       </div>
-      {/* column1 */}
 
-{/* column2 */}
-      {/* <div style={{backgroundImage:"url('/child.png')",backgroundSize:"cover"}}> */}
-
-      <div className="relative w-full h-screen bg-cover bg-center">
-
-  {/* Rectangle 1 */}
-  <div className="absolute top-10 left-10 w-32 h-48 overflow-hidden border-4 border-white">
-    <div className="w-full h-full bg-no-repeat" style={{backgroundImage:"url('/child.png')", backgroundPosition: "-50px -50px"}}></div>
-  </div>
-  
-  {/* Rectangle 2 */}
-  <div className="absolute top-10 right-10 w-32 h-48 overflow-hidden border-4 border-white">
-    <div className="w-full h-full bg-no-repeat" style={{backgroundImage:"url('/child.png')", backgroundPosition: "-150px -50px"}}></div>
+     
+      <div className="bg-bgTrustedBy mt-32 flex relative">
+  {/* Text block */}
+  <div className="text-md font-bold w-[350px] ">
+    <div className="text-primaryColor">
+      <p>Trusted by</p>
+      <p>the best</p>
+    </div>
+    <div className="text-textIndustry">in the industry</div>
   </div>
 
-  {/* Rectangle 3 */}
-  <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-48 h-32 overflow-hidden border-4 border-white">
-    <div className="w-full h-full bg-no-repeat" style={{backgroundImage:"url('/child.png')", backgroundPosition: "-100px -100px"}}></div>
-  </div>
+  {/* Scrolling images */}
+  <div className="mt-4 px-4 flex overflow-hidden">
+    <div className="animate-scroll flex gap-12" style={{ width: 'calc(100% + 250px)' }}>
+      <img src="razorpay.svg" alt="" className="w-32 h-16" />
+      <img src="startup.svg" alt="" className="w-32 h-16" />
+      <img src="vishalakhi.svg" alt="" className="w-32 h-16" />
+      <img src="wadhwani.svg" alt="" className="w-32 h-16" />
+      <img src="microsoft.svg" alt="" className="w-32 h-16" />
+      <img src="hashtagstartup.svg" alt="" className="w-32 h-16" />
 
+      {/* Duplicate images for continuous scroll */}
+      <img src="razorpay.svg" alt="" className="w-32 h-16" />
+      <img src="startup.svg" alt="" className="w-32 h-16" />
+      <img src="vishalakhi.svg" alt="" className="w-32 h-16" />
+      <img src="wadhwani.svg" alt="" className="w-32 h-16" />
+      <img src="microsoft.svg" alt="" className="w-32 h-16" />
+      <img src="hashtagstartup.svg" alt="" className="w-32 h-16" />
+    </div>
+  </div>
 </div>
-
 
 
     </div>
